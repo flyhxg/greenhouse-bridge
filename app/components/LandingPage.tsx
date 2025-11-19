@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 
@@ -70,12 +71,6 @@ const LandingPage: FC = () => {
           <a href="#solutions" className="lang lang-zh">
             解决方案
           </a>
-          <a href="#compliance" className="lang lang-en">
-            Compliance
-          </a>
-          <a href="#compliance" className="lang lang-zh">
-            合规资质
-          </a>
           <a href="#contact" className="lang lang-en">
             Contact
           </a>
@@ -110,8 +105,7 @@ const LandingPage: FC = () => {
             <h1 className="hero__headline lang lang-en">Social-first software without physical goods.</h1>
             <h1 className="hero__headline lang lang-zh">纯线上交付的社交型软件服务。</h1>
             <p className="hero__body lang lang-en">
-              We design, build, and optimize mobile and web applications—community feeds, messaging, creator tools, and
-              bespoke digital platforms—delivered entirely online with continuous support.
+              We design, build, and optimize mobile and web applications—community feeds, messaging, creator tools, and bespoke digital platforms—delivered entirely online with continuous support.
             </p>
             <p className="hero__body lang lang-zh">
               我们提供移动端与网页端应用的设计、开发与优化，包括社区互动、即时通讯、创作者工具及定制化数字平台，全程在线交付并持续运维。
@@ -131,26 +125,61 @@ const LandingPage: FC = () => {
               </a>
             </div>
           </div>
-          <div className="hero__stats">
-            <div className="stat">
-              <span className="stat__value">180+</span>
-              <span className="stat__label lang lang-en">Apps &amp; platforms launched</span>
-              <span className="stat__label lang lang-zh">上线应用与平台</span>
+          <div className="hero__visual-stack">
+            <div className="hero__visual">
+              <figure className="hero__visual-card">
+                <Image
+                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80"
+                  alt="Remote product team aligning on interface layouts"
+                  width={900}
+                  height={600}
+                  priority
+                  sizes="(max-width: 992px) 100vw, 420px"
+                  style={{ width: "100%", height: "220px", objectFit: "cover" }}
+                />
+                <figcaption className="lang lang-en">UI/UX co-creation sprint</figcaption>
+                <figcaption className="lang lang-zh">界面共创冲刺</figcaption>
+              </figure>
+              <figure className="hero__visual-card hero__visual-card--secondary">
+                <Image
+                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+                  alt="Analytics dashboard tracking community engagement"
+                  width={900}
+                  height={600}
+                  loading="lazy"
+                  sizes="(max-width: 992px) 100vw, 360px"
+                  style={{ width: "100%", height: "200px", objectFit: "cover" }}
+                />
+                <figcaption className="lang lang-en">Realtime engagement analytics</figcaption>
+                <figcaption className="lang lang-zh">实时互动分析</figcaption>
+              </figure>
+              <div className="hero__badge">
+                <span className="hero__badge-label lang lang-en">End-to-end delivery</span>
+                <span className="hero__badge-label lang lang-zh">一站式远程交付</span>
+                <strong>100% Digital</strong>
+              </div>
             </div>
-            <div className="stat">
-              <span className="stat__value">12</span>
-              <span className="stat__label lang lang-en">Markets served remotely</span>
-              <span className="stat__label lang lang-zh">远程服务覆盖市场</span>
-            </div>
-            <div className="stat">
-              <span className="stat__value">99.9%</span>
-              <span className="stat__label lang lang-en">Uptime SLO for managed products</span>
-              <span className="stat__label lang lang-zh">托管产品在线率SLO</span>
-            </div>
-            <div className="stat">
-              <span className="stat__value">24/7</span>
-              <span className="stat__label lang lang-en">Global, online-only support</span>
-              <span className="stat__label lang lang-zh">全球纯线上支持</span>
+            <div className="hero__stats">
+              <div className="stat">
+                <span className="stat__value">180+</span>
+                <span className="stat__label lang lang-en">Apps &amp; platforms launched</span>
+                <span className="stat__label lang lang-zh">上线应用与平台</span>
+              </div>
+              <div className="stat">
+                <span className="stat__value">12</span>
+                <span className="stat__label lang lang-en">Markets served remotely</span>
+                <span className="stat__label lang lang-zh">远程服务覆盖市场</span>
+              </div>
+              <div className="stat">
+                <span className="stat__value">99.9%</span>
+                <span className="stat__label lang lang-en">Uptime SLO for managed products</span>
+                <span className="stat__label lang lang-zh">托管产品在线率SLO</span>
+              </div>
+              <div className="stat">
+                <span className="stat__value">24/7</span>
+                <span className="stat__label lang lang-en">Global, online-only support</span>
+                <span className="stat__label lang lang-zh">全球纯线上支持</span>
+              </div>
             </div>
           </div>
         </section>
@@ -243,6 +272,62 @@ const LandingPage: FC = () => {
           </div>
         </section>
 
+        <section className="gallery">
+          <div className="section-heading">
+            <h2 className="lang lang-en">Product visuals from recent launches</h2>
+            <h2 className="lang lang-zh">近期上线项目的产品视觉</h2>
+            <p className="lang lang-en">Screens from remote workshops, beta dashboards, and community experiences.</p>
+            <p className="lang lang-zh">展示远程工作坊、测试版控制台与社区体验的截屏。</p>
+          </div>
+          <div className="gallery__grid" role="list">
+            <figure className="gallery__card" role="listitem">
+              <Image
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                alt="Mobile social app prototype displayed on multiple devices"
+                width={800}
+                height={520}
+                loading="lazy"
+                sizes="(max-width: 992px) 100vw, 360px"
+                style={{ width: "100%", height: "220px", objectFit: "cover" }}
+              />
+              <figcaption>
+                <span className="lang lang-en">Cross-platform social commerce flows for launch readiness.</span>
+                <span className="lang lang-zh">跨平台社交电商流程，确保上线准备充分。</span>
+              </figcaption>
+            </figure>
+            <figure className="gallery__card" role="listitem">
+              <Image
+                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80"
+                alt="Team collaborating via virtual whiteboard"
+                width={800}
+                height={520}
+                loading="lazy"
+                sizes="(max-width: 992px) 100vw, 360px"
+                style={{ width: "100%", height: "220px", objectFit: "cover" }}
+              />
+              <figcaption>
+                <span className="lang lang-en">Remote ideation boards connecting Pacific and Asia teams.</span>
+                <span className="lang lang-zh">连接太平洋与亚洲团队的远程头脑风暴白板。</span>
+              </figcaption>
+            </figure>
+            <figure className="gallery__card" role="listitem">
+              <Image
+                src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=800&q=80"
+                alt="Analytics dashboard showing retention metrics"
+                width={800}
+                height={520}
+                loading="lazy"
+                sizes="(max-width: 992px) 100vw, 360px"
+                style={{ width: "100%", height: "220px", objectFit: "cover" }}
+              />
+              <figcaption>
+                <span className="lang lang-en">Engagement telemetry dashboards with privacy-safe metrics.</span>
+                <span className="lang lang-zh">隐私友好的互动遥测仪表盘。</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="sustainability">
           <div className="section-heading">
             <h2 className="lang lang-en">Reliability &amp; trust</h2>
@@ -279,8 +364,8 @@ const LandingPage: FC = () => {
             <li>
               <h3 className="lang lang-en">01. Discovery &amp; technical audit</h3>
               <h3 className="lang lang-zh">01. 需求梳理与技术评估</h3>
-              <p className="lang lang-en">Define goals, target users, compliance needs, and integration surfaces.</p>
-              <p className="lang lang-zh">明确目标、用户画像、合规要求与系统对接范围。</p>
+              <p className="lang lang-en">Define goals, target users, and integration surfaces.</p>
+              <p className="lang lang-zh">明确目标、用户画像与系统对接范围。</p>
             </li>
             <li>
               <h3 className="lang lang-en">02. Experience &amp; architecture</h3>
@@ -301,54 +386,6 @@ const LandingPage: FC = () => {
               <p className="lang lang-zh">通过 A/B 测试、可靠性评审与增长实验，持续迭代产品。</p>
             </li>
           </ol>
-        </section>
-
-        <section id="compliance" className="compliance">
-          <div className="section-heading">
-            <h2 className="lang lang-en">Compliance &amp; governance</h2>
-            <h2 className="lang lang-zh">合规与治理</h2>
-            <p className="lang lang-en">
-              Wavelength Global Studio maintains transparent governance, privacy-first data handling, and security
-              controls suitable for regulated digital products.
-            </p>
-            <p className="lang lang-zh">维浪全球工作室保持透明的公司治理、隐私优先的数据处理与安全控制，适用于受监管的数字产品。</p>
-          </div>
-          <div className="compliance__grid">
-            <article className="compliance-card">
-              <h3 className="lang lang-en">Registrations</h3>
-              <h3 className="lang lang-zh">注册信息</h3>
-              <ul>
-                <li className="lang lang-en">State of Washington Unified Business Identifier: 604-981-227</li>
-                <li className="lang lang-zh">华盛顿州统一商业编码：604-981-227</li>
-                <li className="lang lang-en">D-U-N-S: 118167093</li>
-                <li className="lang lang-zh">D-U-N-S编号：118167093</li>
-              </ul>
-            </article>
-            <article className="compliance-card">
-              <h3 className="lang lang-en">Certifications</h3>
-              <h3 className="lang lang-zh">认证体系</h3>
-              <ul>
-                <li className="lang lang-en">Secure SDLC and SOC 2-aligned controls</li>
-                <li className="lang lang-zh">遵循安全开发流程与 SOC 2 对齐的控制</li>
-                <li className="lang lang-en">ISO 27001-inspired information security practices</li>
-                <li className="lang lang-zh">参考 ISO 27001 的信息安全实践</li>
-                <li className="lang lang-en">Accessibility and privacy impact assessments</li>
-                <li className="lang lang-zh">无障碍与隐私影响评估</li>
-              </ul>
-            </article>
-            <article className="compliance-card">
-              <h3 className="lang lang-en">Insurance &amp; assurances</h3>
-              <h3 className="lang lang-zh">保险与保障</h3>
-              <ul>
-                <li className="lang lang-en">General liability coverage: $5M aggregate</li>
-                <li className="lang lang-zh">综合责任险：总保额500万美元</li>
-                <li className="lang lang-en">Professional liability for software services</li>
-                <li className="lang lang-zh">面向软件服务的职业责任险</li>
-                <li className="lang lang-en">Third-party penetration testing partners for annual reviews</li>
-                <li className="lang lang-zh">与第三方合作开展年度渗透测试</li>
-              </ul>
-            </article>
-          </div>
         </section>
 
         <section className="testimonials">
@@ -384,8 +421,8 @@ const LandingPage: FC = () => {
           <div className="section-heading">
             <h2 className="lang lang-en">Let’s ship your next digital product</h2>
             <h2 className="lang lang-zh">携手上线您的下一个数字产品</h2>
-            <p className="lang lang-en">Submit a project brief, schedule a remote workshop, or request compliance docs for app review.</p>
-            <p className="lang lang-zh">欢迎提交项目简介、预约远程研讨，或索取应用审核所需的合规材料。</p>
+            <p className="lang lang-en">Submit a project brief, schedule a remote workshop, or request estimates for your roadmap.</p>
+            <p className="lang lang-zh">欢迎提交项目简介、预约远程研讨，或索取路线图的时间与成本评估。</p>
           </div>
           <div className="contact__grid">
             <div className="contact__card">
@@ -418,19 +455,19 @@ const LandingPage: FC = () => {
               <p>
                 <a href="tel:+12069803370">+1 (206) 980-3370</a>
                 <br />
-                <a href="mailto:hello@wgs.studio">hello@wgs.studio</a>
+                <a href="mailto:contact@westgardensupply">contact@westgardensupply</a>
               </p>
               <p className="lang lang-en">We typically respond within one business day.</p>
               <p className="lang lang-zh">通常在一个工作日内回复。</p>
               <a
                 className="btn btn--ghost lang lang-en"
-                href="mailto:hello@wgs.studio?subject=Partnership%20Inquiry"
+                href="mailto:contact@westgardensupply?subject=Partnership%20Inquiry"
               >
                 Email our team
               </a>
               <a
                 className="btn btn--ghost lang lang-zh"
-                href="mailto:hello@wgs.studio?subject=%E5%90%88%E4%BD%9C%E9%97%AE%E8%AF%A2"
+                href="mailto:contact@westgardensupply?subject=%E5%90%88%E4%BD%9C%E9%97%AE%E8%AF%A2"
               >
                 发送邮件
               </a>
@@ -444,12 +481,6 @@ const LandingPage: FC = () => {
           <span className="lang lang-zh">© 2025 维浪全球工作室。保留所有权利。</span>
         </div>
         <div className="footer-links">
-          <a className="lang lang-en" href="#compliance">
-            Corporate compliance
-          </a>
-          <a className="lang lang-zh" href="#compliance">
-            公司合规
-          </a>
           <a className="lang lang-en" href="mailto:legal@wgs.studio">
             legal@wgs.studio
           </a>

@@ -307,10 +307,12 @@ const LandingPage = () => {
             <h2 className="lang lang-en">Compliance &amp; governance</h2>
             <h2 className="lang lang-zh">合规与治理</h2>
             <p className="lang lang-en">
+
               Wavelength Global Studio maintains transparent governance, privacy-first data handling, and security
               controls suitable for regulated digital products.
             </p>
             <p className="lang lang-zh">维浪全球工作室保持透明的公司治理、隐私优先的数据处理与安全控制，适用于受监管的数字产品。</p>
+lang-zh">西部园艺供应保持透明的公司治理、隐私优先的数据处理与安全控制，适用于受监管的数字产品。</p>
           </div>
           <div className="compliance__grid">
             <article className="compliance-card">
@@ -366,6 +368,7 @@ const LandingPage = () => {
               </p>
               <span className="lang lang-en">— COO, NovaLink Networks</span>
               <span className="lang lang-zh">— NovaLink Networks 首席运营官</span>
+
             </article>
             <article>
               <p className="lang lang-en">
@@ -373,8 +376,10 @@ const LandingPage = () => {
                 safety tightly controlled.”
               </p>
               <p className="lang lang-zh">“他们的分析与 A/B 测试框架让周活提升了28%，同时保持了严格的安全治理。”</p>
+
               <span className="lang lang-en">— Product Lead, LumenStack</span>
               <span className="lang lang-zh">— LumenStack 产品负责人</span>
+
             </article>
           </div>
         </section>

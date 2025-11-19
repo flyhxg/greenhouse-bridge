@@ -50,10 +50,10 @@ const LandingPage = () => {
         <div className="brand">
           <div className="brand__mark">WGS</div>
           <div>
-            <span className="brand__name lang lang-en">West Garden Supply</span>
-            <span className="brand__name lang lang-zh">西部园艺供应</span>
-            <span className="brand__tagline lang lang-en">Building social software that scales.</span>
-            <span className="brand__tagline lang lang-zh">打造可扩展的社交软件。</span>
+            <span className="brand__name lang lang-en">Wavelength Global Studio</span>
+            <span className="brand__name lang lang-zh">维浪全球工作室</span>
+            <span className="brand__tagline lang lang-en">Building social-grade software with precision.</span>
+            <span className="brand__tagline lang lang-zh">以工程化精度打造社交级软件。</span>
           </div>
         </div>
         <nav className="main-nav" aria-label="Primary navigation">
@@ -307,10 +307,12 @@ const LandingPage = () => {
             <h2 className="lang lang-en">Compliance &amp; governance</h2>
             <h2 className="lang lang-zh">合规与治理</h2>
             <p className="lang lang-en">
-              West Garden Supply maintains transparent corporate governance, privacy-first data handling, and security
+
+              Wavelength Global Studio maintains transparent governance, privacy-first data handling, and security
               controls suitable for regulated digital products.
             </p>
-            <p className="lang lang-zh">西部园艺供应保持透明的公司治理、隐私优先的数据处理与安全控制，适用于受监管的数字产品。</p>
+            <p className="lang lang-zh">维浪全球工作室保持透明的公司治理、隐私优先的数据处理与安全控制，适用于受监管的数字产品。</p>
+lang-zh">西部园艺供应保持透明的公司治理、隐私优先的数据处理与安全控制，适用于受监管的数字产品。</p>
           </div>
           <div className="compliance__grid">
             <article className="compliance-card">
@@ -364,8 +366,9 @@ const LandingPage = () => {
               <p className="lang lang-zh">
                 “他们在90天内交付了我们的社交电商应用，聊天、直播、审核全都上线，我们完全无需管理任何实体库存。”
               </p>
-              <span className="lang lang-en">— COO, Cascade Greens</span>
-              <span className="lang lang-zh">— Cascade Greens 首席运营官</span>
+              <span className="lang lang-en">— COO, NovaLink Networks</span>
+              <span className="lang lang-zh">— NovaLink Networks 首席运营官</span>
+
             </article>
             <article>
               <p className="lang lang-en">
@@ -373,8 +376,10 @@ const LandingPage = () => {
                 safety tightly controlled.”
               </p>
               <p className="lang lang-zh">“他们的分析与 A/B 测试框架让周活提升了28%，同时保持了严格的安全治理。”</p>
-              <span className="lang lang-en">— Product Lead, Sunharvest Cooperative</span>
-              <span className="lang lang-zh">— Sunharvest Cooperative 产品负责人</span>
+
+              <span className="lang lang-en">— Product Lead, LumenStack</span>
+              <span className="lang lang-zh">— LumenStack 产品负责人</span>
+
             </article>
           </div>
         </section>
@@ -417,19 +422,19 @@ const LandingPage = () => {
               <p>
                 <a href="tel:+12069803370">+1 (206) 980-3370</a>
                 <br />
-                <a href="mailto:hello@westgardensupply.com">hello@westgardensupply.com</a>
+                <a href="mailto:hello@wgs.studio">hello@wgs.studio</a>
               </p>
               <p className="lang lang-en">We typically respond within one business day.</p>
               <p className="lang lang-zh">通常在一个工作日内回复。</p>
               <a
                 className="btn btn--ghost lang lang-en"
-                href="mailto:hello@westgardensupply.com?subject=Partnership%20Inquiry"
+                href="mailto:hello@wgs.studio?subject=Partnership%20Inquiry"
               >
                 Email our team
               </a>
               <a
                 className="btn btn--ghost lang lang-zh"
-                href="mailto:hello@westgardensupply.com?subject=%E5%90%88%E4%BD%9C%E9%97%AE%E8%AF%A2"
+                href="mailto:hello@wgs.studio?subject=%E5%90%88%E4%BD%9C%E9%97%AE%E8%AF%A2"
               >
                 发送邮件
               </a>
@@ -439,8 +444,8 @@ const LandingPage = () => {
       </main>
       <footer className="site-footer">
         <div>
-          <span className="lang lang-en">© 2025 West Garden Supply. All rights reserved.</span>
-          <span className="lang lang-zh">© 2025 西部园艺供应。保留所有权利。</span>
+          <span className="lang lang-en">© 2025 Wavelength Global Studio. All rights reserved.</span>
+          <span className="lang lang-zh">© 2025 维浪全球工作室。保留所有权利。</span>
         </div>
         <div className="footer-links">
           <a className="lang lang-en" href="#compliance">
@@ -449,11 +454,11 @@ const LandingPage = () => {
           <a className="lang lang-zh" href="#compliance">
             公司合规
           </a>
-          <a className="lang lang-en" href="mailto:legal@westgardensupply.com">
-            legal@westgardensupply.com
+          <a className="lang lang-en" href="mailto:legal@wgs.studio">
+            legal@wgs.studio
           </a>
-          <a className="lang lang-zh" href="mailto:legal@westgardensupply.com">
-            legal@westgardensupply.com
+          <a className="lang lang-zh" href="mailto:legal@wgs.studio">
+            legal@wgs.studio
           </a>
         </div>
       </footer>

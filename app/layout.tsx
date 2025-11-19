@@ -1,41 +1,34 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap"
-});
-
 export const metadata: Metadata = {
-  title: "West Garden Supply",
+  title: "Wavelength Global Studio",
   description:
-    "West Garden Supply delivers greenhouse infrastructure, smart irrigation, and agritech lifecycle services across North America.",
+    "Remote-first product studio delivering social-grade software—mobile, web, and bespoke digital experiences—fully online.",
   icons: {
     icon: "/favicon.ico"
   },
   openGraph: {
-    title: "West Garden Supply",
+    title: "Wavelength Global Studio",
     description:
-      "Premium greenhouse infrastructure and cultivation supply chain partner for resilient growers.",
-    url: "https://www.westgardensupply.com",
-    siteName: "West Garden Supply",
+      "Remote-first studio crafting social platforms, messaging, and interactive digital products—delivered entirely online.",
+    url: "https://www.wgs.studio",
+    siteName: "Wavelength Global Studio",
     locale: "en_US",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "West Garden Supply",
+    title: "Wavelength Global Studio",
     description:
-      "Premium greenhouse infrastructure and cultivation supply chain partner for resilient growers."
+      "Remote-first studio crafting social platforms, messaging, and interactive digital products—delivered entirely online."
   }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={outfit.className} data-lang="en">
+      <body data-lang="en">
         {children}
       </body>
     </html>

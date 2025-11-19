@@ -28,8 +28,8 @@ body {
 }
 
 body {
-  font-family: "Outfit", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
   color: var(--color-text);
   background: linear-gradient(145deg, var(--color-background) 0%, #ffffff 65%);
   line-height: 1.6;

@@ -455,19 +455,19 @@ const LandingPage: FC = () => {
               <p>
                 <a href="tel:+12069803370">+1 (206) 980-3370</a>
                 <br />
-                <a href="mailto:contact@westgardensupply">contact@westgardensupply</a>
+                <a href="mailto:contact@westgardensupply.com">contact@westgardensupply.com</a>
               </p>
               <p className="lang lang-en">We typically respond within one business day.</p>
               <p className="lang lang-zh">通常在一个工作日内回复。</p>
               <a
                 className="btn btn--ghost lang lang-en"
-                href="mailto:contact@westgardensupply?subject=Partnership%20Inquiry"
+                href="mailto:contact@westgardensupply.com?subject=Partnership%20Inquiry"
               >
                 Email our team
               </a>
               <a
                 className="btn btn--ghost lang lang-zh"
-                href="mailto:contact@westgardensupply?subject=%E5%90%88%E4%BD%9C%E9%97%AE%E8%AF%A2"
+                href="mailto:contact@westgardensupply.com?subject=%E5%90%88%E4%BD%9C%E9%97%AE%E8%AF%A2"
               >
                 发送邮件
               </a>
@@ -481,11 +481,11 @@ const LandingPage: FC = () => {
           <span className="lang lang-zh">© 2025 维浪全球工作室。保留所有权利。</span>
         </div>
         <div className="footer-links">
-          <a className="lang lang-en" href="mailto:contact@westgardensupply">
-            contact@westgardensupply
+          <a className="lang lang-en" href="mailto:contact@westgardensupply.com">
+            contact@westgardensupply.com
           </a>
-          <a className="lang lang-zh" href="mailto:contact@westgardensupply">
-            contact@westgardensupply
+          <a className="lang lang-zh" href="mailto:contact@westgardensupply.com">
+            contact@westgardensupply.com
           </a>
         </div>
       </footer>

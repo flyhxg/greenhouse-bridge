@@ -50,7 +50,39 @@ const LandingPage: FC = () => {
       </a>
       <header className="site-header">
         <div className="brand">
-          <div className="brand__mark">WGS</div>
+          <div className="brand__logo" aria-hidden="true" role="presentation">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="wgs-gradient" x1="15%" x2="90%" y1="10%" y2="85%">
+                  <stop stopColor="#7fb0ff" stopOpacity="0.9" offset="0%" />
+                  <stop stopColor="#2759ff" stopOpacity="1" offset="60%" />
+                  <stop stopColor="#1b3ecf" stopOpacity="1" offset="100%" />
+                </linearGradient>
+                <linearGradient id="wgs-sheen" x1="0%" x2="100%" y1="0%" y2="0%">
+                  <stop stopColor="#e5edff" stopOpacity="0.95" offset="0%" />
+                  <stop stopColor="#c7d8ff" stopOpacity="0.2" offset="60%" />
+                  <stop stopColor="#7fb0ff" stopOpacity="0" offset="100%" />
+                </linearGradient>
+              </defs>
+              <g strokeWidth="8" fill="none">
+                <circle cx="60" cy="60" r="48" stroke="url(#wgs-gradient)" />
+                <path
+                  d="M24 70c10 10 23 16 36 16 13 0 24-5 36-16"
+                  stroke="url(#wgs-sheen)"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M36 44c6.5 14 14 22 24 22 9.5 0 18-8 24-22"
+                  stroke="url(#wgs-gradient)"
+                  strokeLinecap="round"
+                />
+              </g>
+              <g fill="none" stroke="#0f172a" strokeWidth="5" strokeLinecap="round">
+                <path d="M40 44c4 8 8 12 14 12" />
+                <path d="M52 72c5 4 10 6 16 6" />
+              </g>
+            </svg>
+          </div>
           <div>
             <span className="brand__name lang lang-en">Wavelength Global Studio</span>
             <span className="brand__name lang lang-zh">维浪全球工作室</span>

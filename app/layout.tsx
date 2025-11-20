@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Wavelength Global Studio",
+  title: "Wavelength Global Studio | Social Software Studio",
+  applicationName: "Wavelength Global Studio",
   description:
     "Remote-first product studio delivering social-grade software—mobile, web, and bespoke digital experiences—fully online.",
   icons: {

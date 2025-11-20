@@ -162,12 +162,12 @@ const LandingPage: FC = () => {
               <figure className="hero__visual-card">
                 <Image
                   className="hero__image hero__image--primary"
-                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80"
+                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=85"
                   alt="Remote product team aligning on interface layouts"
-                  width={900}
-                  height={600}
+                  width={1200}
+                  height={800}
                   priority
-                  sizes="(max-width: 992px) 100vw, 420px"
+                  sizes="(max-width: 992px) 100vw, 540px"
                 />
                 <figcaption className="lang lang-en">UI/UX co-creation sprint</figcaption>
                 <figcaption className="lang lang-zh">界面共创冲刺</figcaption>
@@ -175,12 +175,12 @@ const LandingPage: FC = () => {
               <figure className="hero__visual-card hero__visual-card--secondary">
                 <Image
                   className="hero__image hero__image--secondary"
-                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=85"
                   alt="Analytics dashboard tracking community engagement"
-                  width={900}
-                  height={600}
+                  width={1100}
+                  height={740}
                   loading="lazy"
-                  sizes="(max-width: 992px) 100vw, 360px"
+                  sizes="(max-width: 992px) 100vw, 460px"
                 />
                 <figcaption className="lang lang-en">Realtime engagement analytics</figcaption>
                 <figcaption className="lang lang-zh">实时互动分析</figcaption>
@@ -315,12 +315,12 @@ const LandingPage: FC = () => {
             <figure className="gallery__card" role="listitem">
               <Image
                 className="gallery__image"
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85"
                 alt="Mobile social app prototype displayed on multiple devices"
-                width={800}
-                height={520}
+                width={1200}
+                height={780}
                 loading="lazy"
-                sizes="(max-width: 992px) 100vw, 360px"
+                sizes="(max-width: 992px) 100vw, 480px"
               />
               <figcaption>
                 <span className="lang lang-en">Cross-platform social commerce flows for launch readiness.</span>
@@ -330,12 +330,12 @@ const LandingPage: FC = () => {
             <figure className="gallery__card" role="listitem">
               <Image
                 className="gallery__image"
-                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=85"
                 alt="Team collaborating via virtual whiteboard"
-                width={800}
-                height={520}
+                width={1200}
+                height={780}
                 loading="lazy"
-                sizes="(max-width: 992px) 100vw, 360px"
+                sizes="(max-width: 992px) 100vw, 480px"
               />
               <figcaption>
                 <span className="lang lang-en">Remote ideation boards connecting Pacific and Asia teams.</span>
@@ -345,12 +345,12 @@ const LandingPage: FC = () => {
             <figure className="gallery__card" role="listitem">
               <Image
                 className="gallery__image"
-                src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1200&q=85"
                 alt="Analytics dashboard showing retention metrics"
-                width={800}
-                height={520}
+                width={1200}
+                height={780}
                 loading="lazy"
-                sizes="(max-width: 992px) 100vw, 360px"
+                sizes="(max-width: 992px) 100vw, 480px"
               />
               <figcaption>
                 <span className="lang lang-en">Engagement telemetry dashboards with privacy-safe metrics.</span>
@@ -485,8 +485,6 @@ const LandingPage: FC = () => {
               <h3 className="lang lang-en">Contact</h3>
               <h3 className="lang lang-zh">联系方式</h3>
               <p>
-                <a href="tel:+12069803370">+1 (206) 980-3370</a>
-                <br />
                 <a href="mailto:contact@westgardensupply.com">contact@westgardensupply.com</a>
               </p>
               <p className="lang lang-en">We typically respond within one business day.</p>

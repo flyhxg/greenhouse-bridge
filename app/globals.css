@@ -172,9 +172,9 @@ main {
 
 .hero {
   display: grid;
-  gap: 2.5rem;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  padding: 3.5rem 3rem;
+  gap: 2.75rem;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  padding: 4rem 3.5rem;
   background: var(--color-surface);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
@@ -232,10 +232,10 @@ main {
 
 .hero__visual {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
   position: relative;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2.75rem;
 }
 
 .hero__visual-card {
@@ -250,12 +250,8 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
-  aspect-ratio: 3 / 2;
-  display: block;
-}
-
-.hero__image--secondary {
   aspect-ratio: 4 / 3;
+  display: block;
 }
 
 .hero__visual-card figcaption {
@@ -398,8 +394,8 @@ main {
 
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
 }
 
 .gallery__card {
@@ -414,7 +410,7 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
   display: block;
 }
 

@@ -162,39 +162,40 @@ const LandingPage: FC = () => {
               <div className="hero__note">
                 <p className="hero__note-kicker lang lang-en">Company principles</p>
                 <p className="hero__note-kicker lang lang-zh">公司理念</p>
-                <h3 className="hero__note-title lang lang-en">Aligned, measurable, privacy-first.</h3>
-                <h3 className="hero__note-title lang lang-zh">聚焦一致、可衡量、重隐私。</h3>
+                <h3 className="hero__note-title lang lang-en">Purely online, social-grade delivery.</h3>
+                <h3 className="hero__note-title lang lang-zh">纯线上交付的社交型软件服务。</h3>
                 <p className="hero__note-body lang lang-en">
-                  Dedicated product squads pair weekly releases with UX validation, data observability, and zero-physical
-                  delivery so every launch is transparent and remote-ready.
+                  We design, build, and optimize mobile and web apps for community interaction, messaging, creator tools,
+                  and bespoke digital platforms—delivered fully online with ongoing operations.
                 </p>
                 <p className="hero__note-body lang lang-zh">
-                  专职产品小组以周迭代结合体验验证、数据可观测与纯线上交付，保证每次上线透明可信、远程即用。
+                  我们提供移动端与网页端应用的设计、开发与优化，包括社区互动、即时通讯、创作者工具及定制化数字平台，全程在线交付并
+                  持续运维。
                 </p>
                 <ul className="hero__note-list">
                   <li className="lang lang-en">
-                    <span>Signal-driven sprints</span>
-                    <small>Design + engineering pods ship weekly with clear KPIs.</small>
+                    <span>Community interactions</span>
+                    <small>Feeds, forums, and live rooms crafted for engagement.</small>
                   </li>
                   <li className="lang lang-zh">
-                    <span>信号驱动冲刺</span>
-                    <small>设计与研发协作周更，指标透明。</small>
+                    <span>社区互动体验</span>
+                    <small>动态、论坛与直播工具，提升用户参与度。</small>
                   </li>
                   <li className="lang lang-en">
-                    <span>Community-grade reliability</span>
-                    <small>SLO-backed uptime and observability for social flows.</small>
+                    <span>Messaging &amp; trust</span>
+                    <small>Secure chat, moderation, and safety guardrails included.</small>
                   </li>
                   <li className="lang lang-zh">
-                    <span>社区级可靠性</span>
-                    <small>以SLO保障社交流程在线率与可观测。</small>
+                    <span>通讯与安全</span>
+                    <small>安全聊天、审核与信任机制一体化配置。</small>
                   </li>
                   <li className="lang lang-en">
-                    <span>Privacy-first delivery</span>
-                    <small>Security reviews and zero on-prem hardware required.</small>
+                    <span>Creator-ready platforms</span>
+                    <small>Publishing, analytics, and monetization that ship quickly.</small>
                   </li>
                   <li className="lang lang-zh">
-                    <span>隐私优先交付</span>
-                    <small>安全评估在先，无需任何本地硬件。</small>
+                    <span>创作者友好平台</span>
+                    <small>发布、数据与变现能力快速上线。</small>
                   </li>
                 </ul>
               </div>

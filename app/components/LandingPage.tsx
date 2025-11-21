@@ -1,12 +1,14 @@
 'use client';
 
+import Image from "next/image";
+import type { FC } from "react";
 import { useEffect, useState } from "react";
 
 type Language = "en" | "zh";
 
 const LANG_STORAGE_KEY = "wgs-lang";
 
-const LandingPage = () => {
+const LandingPage: FC = () => {
   const [language, setLanguage] = useState<Language>("en");
 
   useEffect(() => {
@@ -48,12 +50,44 @@ const LandingPage = () => {
       </a>
       <header className="site-header">
         <div className="brand">
-          <div className="brand__mark">WGS</div>
+          <div className="brand__logo" aria-hidden="true" role="presentation">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="wgs-gradient" x1="15%" x2="90%" y1="10%" y2="85%">
+                  <stop stopColor="#7fb0ff" stopOpacity="0.9" offset="0%" />
+                  <stop stopColor="#2759ff" stopOpacity="1" offset="60%" />
+                  <stop stopColor="#1b3ecf" stopOpacity="1" offset="100%" />
+                </linearGradient>
+                <linearGradient id="wgs-sheen" x1="0%" x2="100%" y1="0%" y2="0%">
+                  <stop stopColor="#e5edff" stopOpacity="0.95" offset="0%" />
+                  <stop stopColor="#c7d8ff" stopOpacity="0.2" offset="60%" />
+                  <stop stopColor="#7fb0ff" stopOpacity="0" offset="100%" />
+                </linearGradient>
+              </defs>
+              <g strokeWidth="8" fill="none">
+                <circle cx="60" cy="60" r="48" stroke="url(#wgs-gradient)" />
+                <path
+                  d="M24 70c10 10 23 16 36 16 13 0 24-5 36-16"
+                  stroke="url(#wgs-sheen)"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M36 44c6.5 14 14 22 24 22 9.5 0 18-8 24-22"
+                  stroke="url(#wgs-gradient)"
+                  strokeLinecap="round"
+                />
+              </g>
+              <g fill="none" stroke="#0f172a" strokeWidth="5" strokeLinecap="round">
+                <path d="M40 44c4 8 8 12 14 12" />
+                <path d="M52 72c5 4 10 6 16 6" />
+              </g>
+            </svg>
+          </div>
           <div>
-            <span className="brand__name lang lang-en">West Garden Supply</span>
-            <span className="brand__name lang lang-zh">西部园艺供应</span>
-            <span className="brand__tagline lang lang-en">Growing smarter, greener spaces.</span>
-            <span className="brand__tagline lang lang-zh">用科技打造智慧绿色空间。</span>
+            <span className="brand__name lang lang-en">Wavelength Global Studio</span>
+            <span className="brand__name lang lang-zh">维浪全球工作室</span>
+            <span className="brand__tagline lang lang-en">Building social-grade software with precision.</span>
+            <span className="brand__tagline lang lang-zh">以工程化精度打造社交级软件。</span>
           </div>
         </div>
         <nav className="main-nav" aria-label="Primary navigation">
@@ -68,12 +102,6 @@ const LandingPage = () => {
           </a>
           <a href="#solutions" className="lang lang-zh">
             解决方案
-          </a>
-          <a href="#compliance" className="lang lang-en">
-            Compliance
-          </a>
-          <a href="#compliance" className="lang lang-zh">
-            合规资质
           </a>
           <a href="#contact" className="lang lang-en">
             Contact
@@ -104,16 +132,15 @@ const LandingPage = () => {
       <main id="main-content">
         <section className="hero">
           <div className="hero__content">
-            <p className="eyebrow lang lang-en">Trusted horticulture partner since 2004</p>
-            <p className="eyebrow lang lang-zh">自2004年值得信赖的园艺合作伙伴</p>
-            <h1 className="hero__headline lang lang-en">Premium greenhouse infrastructure &amp; cultivation supply chain.</h1>
-            <h1 className="hero__headline lang lang-zh">温室基础设施与作物栽培供应链整体服务商。</h1>
+            <p className="eyebrow lang lang-en">Remote-first product studio for social experiences</p>
+            <p className="eyebrow lang lang-zh">专注社交体验的远程化产品工作室</p>
+            <h1 className="hero__headline lang lang-en">Social-first software without physical goods.</h1>
+            <h1 className="hero__headline lang lang-zh">纯线上交付的社交型软件服务。</h1>
             <p className="hero__body lang lang-en">
-              West Garden Supply equips commercial growers, agri-tech startups, and municipal projects with end-to-end
-              procurement, installation, and ongoing support for modern horticulture environments.
+              We design, build, and optimize mobile and web applications—community feeds, messaging, creator tools, and bespoke digital platforms—delivered entirely online with continuous support.
             </p>
             <p className="hero__body lang lang-zh">
-              西部园艺供应为商业种植者、农业科技企业及市政项目提供覆盖采购、安装与运维的智慧园艺解决方案，实现高效、可持续的种植环境。
+              我们提供移动端与网页端应用的设计、开发与优化，包括社区互动、即时通讯、创作者工具及定制化数字平台，全程在线交付并持续运维。
             </p>
             <div className="hero__cta">
               <a className="btn btn--primary lang lang-en" href="#solutions">
@@ -130,241 +157,307 @@ const LandingPage = () => {
               </a>
             </div>
           </div>
-          <div className="hero__stats">
-            <div className="stat">
-              <span className="stat__value">320+</span>
-              <span className="stat__label lang lang-en">Commercial installations</span>
-              <span className="stat__label lang lang-zh">商业项目落地</span>
+          <div className="hero__visual-stack">
+            <div className="hero__visual">
+              <div className="hero__note">
+                <p className="hero__note-kicker lang lang-en">Company principles</p>
+                <p className="hero__note-kicker lang lang-zh">公司理念</p>
+                <h3 className="hero__note-title lang lang-en">Purely online, social-grade delivery.</h3>
+                <h3 className="hero__note-title lang lang-zh">纯线上交付的社交型软件服务。</h3>
+                <p className="hero__note-body lang lang-en">
+                  We design, build, and optimize mobile and web apps for community interaction, messaging, creator tools,
+                  and bespoke digital platforms—delivered fully online with ongoing operations.
+                </p>
+                <p className="hero__note-body lang lang-zh">
+                  我们提供移动端与网页端应用的设计、开发与优化，包括社区互动、即时通讯、创作者工具及定制化数字平台，全程在线交付并
+                  持续运维。
+                </p>
+                <ul className="hero__note-list">
+                  <li className="lang lang-en">
+                    <span>Community interactions</span>
+                    <small>Feeds, forums, and live rooms crafted for engagement.</small>
+                  </li>
+                  <li className="lang lang-zh">
+                    <span>社区互动体验</span>
+                    <small>动态、论坛与直播工具，提升用户参与度。</small>
+                  </li>
+                  <li className="lang lang-en">
+                    <span>Messaging &amp; trust</span>
+                    <small>Secure chat, moderation, and safety guardrails included.</small>
+                  </li>
+                  <li className="lang lang-zh">
+                    <span>通讯与安全</span>
+                    <small>安全聊天、审核与信任机制一体化配置。</small>
+                  </li>
+                  <li className="lang lang-en">
+                    <span>Creator-ready platforms</span>
+                    <small>Publishing, analytics, and monetization that ship quickly.</small>
+                  </li>
+                  <li className="lang lang-zh">
+                    <span>创作者友好平台</span>
+                    <small>发布、数据与变现能力快速上线。</small>
+                  </li>
+                </ul>
+              </div>
+              <figure className="hero__visual-card">
+                <Image
+                  className="hero__image hero__image--primary"
+                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=85"
+                  alt="Remote product team aligning on interface layouts"
+                  width={1200}
+                  height={800}
+                  priority
+                  sizes="(max-width: 992px) 100vw, 540px"
+                />
+                <figcaption className="lang lang-en">UI/UX co-creation sprint</figcaption>
+                <figcaption className="lang lang-zh">界面共创冲刺</figcaption>
+              </figure>
+              <figure className="hero__visual-card hero__visual-card--secondary">
+                <Image
+                  className="hero__image hero__image--secondary"
+                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=85"
+                  alt="Analytics dashboard tracking community engagement"
+                  width={1100}
+                  height={740}
+                  loading="lazy"
+                  sizes="(max-width: 992px) 100vw, 460px"
+                />
+                <figcaption className="lang lang-en">Realtime engagement analytics</figcaption>
+                <figcaption className="lang lang-zh">实时互动分析</figcaption>
+              </figure>
+              <div className="hero__badge">
+                <span className="hero__badge-label lang lang-en">End-to-end delivery</span>
+                <span className="hero__badge-label lang lang-zh">一站式远程交付</span>
+                <strong>100% Digital</strong>
+              </div>
             </div>
-            <div className="stat">
-              <span className="stat__value">28</span>
-              <span className="stat__label lang lang-en">U.S. states served</span>
-              <span className="stat__label lang lang-zh">覆盖美国28州</span>
-            </div>
-            <div className="stat">
-              <span className="stat__value">15%</span>
-              <span className="stat__label lang lang-en">Average yield increase</span>
-              <span className="stat__label lang lang-zh">平均产量提升</span>
-            </div>
-            <div className="stat">
-              <span className="stat__value">ISO</span>
-              <span className="stat__label lang lang-en">ISO 9001 &amp; 14001 certified</span>
-              <span className="stat__label lang lang-zh">通过ISO 9001/14001</span>
+            <div className="hero__stats">
+              <div className="stat">
+                <span className="stat__value">180+</span>
+                <span className="stat__label lang lang-en">Apps &amp; platforms launched</span>
+                <span className="stat__label lang lang-zh">上线应用与平台</span>
+              </div>
+              <div className="stat">
+                <span className="stat__value">12</span>
+                <span className="stat__label lang lang-en">Markets served remotely</span>
+                <span className="stat__label lang lang-zh">远程服务覆盖市场</span>
+              </div>
+              <div className="stat">
+                <span className="stat__value">99.9%</span>
+                <span className="stat__label lang lang-en">Uptime SLO for managed products</span>
+                <span className="stat__label lang lang-zh">托管产品在线率SLO</span>
+              </div>
+              <div className="stat">
+                <span className="stat__value">24/7</span>
+                <span className="stat__label lang lang-en">Global, online-only support</span>
+                <span className="stat__label lang lang-zh">全球纯线上支持</span>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="about" className="about">
           <div className="section-heading">
-            <h2 className="lang lang-en">Built for resilient growers</h2>
-            <h2 className="lang lang-zh">为有韧性的种植者而生</h2>
+            <h2 className="lang lang-en">Built for digital-first brands</h2>
+            <h2 className="lang lang-zh">为数字化品牌而生</h2>
             <p className="lang lang-en">
-              Headquartered in Seattle, WA with regional warehousing in Nevada and Ohio, West Garden Supply connects
-              growers with dependable greenhouse infrastructure, precision irrigation, and climate control expertise.
+              Based in Seattle with a fully remote delivery model, we help founders and enterprises launch social products
+              faster—covering UI/UX, engineering, cloud infrastructure, and growth experimentation.
             </p>
             <p className="lang lang-zh">
-              总部位于美国华盛顿州西雅图，在内华达及俄亥俄设立区域仓储中心，为客户提供可靠的温室设施、精准灌溉与环境控制技术支持。
+              团队总部位于西雅图，采用完全远程交付模式，为初创与企业客户提供社交产品的设计、研发、云架构与增长实验，帮助更快上线。
             </p>
           </div>
           <div className="pillars">
             <article className="pillar-card">
-              <h3 className="lang lang-en">End-to-end supply chain</h3>
-              <h3 className="lang lang-zh">端到端供应链</h3>
+              <h3 className="lang lang-en">Product strategy to launch</h3>
+              <h3 className="lang lang-zh">策略到上线一站式</h3>
               <p className="lang lang-en">
-                Sourcing, logistics, bonded warehousing, and installation oversight handled by a single accountable team.
+                Research, prototyping, design systems, development, and release management all handled by one accountable
+                team.
               </p>
-              <p className="lang lang-zh">统一团队负责采购、物流、保税仓储与安装监理，实现交付可控。</p>
+              <p className="lang lang-zh">一支团队完成用户研究、原型、设计系统、开发与发布管理，统一负责。</p>
             </article>
             <article className="pillar-card">
-              <h3 className="lang lang-en">Data-led agronomy</h3>
-              <h3 className="lang lang-zh">数据驱动农艺</h3>
+              <h3 className="lang lang-en">Data-led product growth</h3>
+              <h3 className="lang lang-zh">数据驱动的产品增长</h3>
               <p className="lang lang-en">
-                Crop steering playbooks, climate recipes, and IoT monitoring help growers continuously optimize output.
+                Analytics pipelines, experimentation, and personalization keep communities engaged and retention high.
               </p>
-              <p className="lang lang-zh">通过栽培策略手册、气候配方与物联网监测，持续优化作物产量与品质。</p>
+              <p className="lang lang-zh">通过数据管道、实验与个性化，提升社区活跃度与留存。</p>
             </article>
             <article className="pillar-card">
-              <h3 className="lang lang-en">Sustainable materials</h3>
-              <h3 className="lang lang-zh">可持续材料</h3>
+              <h3 className="lang lang-en">Secure, scalable delivery</h3>
+              <h3 className="lang lang-zh">安全可扩展交付</h3>
               <p className="lang lang-en">
-                Energy-efficient glazing, recycled substrates, and water recirculation systems reduce operational footprint.
+                Cloud-native architectures, privacy-first data practices, and automated QA ensure reliability from day one.
               </p>
-              <p className="lang lang-zh">采用节能透光材料、再生基质与水循环系统，降低运营成本与碳排放。</p>
+              <p className="lang lang-zh">云原生架构、隐私优先的数据实践与自动化测试，保障上线即可靠。</p>
             </article>
           </div>
         </section>
 
         <section id="solutions" className="solutions">
           <div className="section-heading">
-            <h2 className="lang lang-en">Solutions designed for scale</h2>
-            <h2 className="lang lang-zh">面向规模化的解决方案</h2>
-            <p className="lang lang-en">
-              Choose from turnkey packages or co-develop with our engineering team to meet crop and compliance needs.
-            </p>
-            <p className="lang lang-zh">可选择标准化交钥匙方案，或与工程团队共同开发以满足作物与合规需求。</p>
+            <h2 className="lang lang-en">Digital solutions for modern engagement</h2>
+            <h2 className="lang lang-zh">面向现代互动的数字方案</h2>
+            <p className="lang lang-en">Pick a turnkey package or co-build a roadmap with our engineers and designers.</p>
+            <p className="lang lang-zh">可选择标准化方案，或与工程与设计团队共创产品路线图。</p>
           </div>
           <div className="solutions__grid">
             <article className="solution-card">
-              <h3 className="lang lang-en">Glass &amp; poly greenhouses</h3>
-              <h3 className="lang lang-zh">玻璃及薄膜温室</h3>
+              <h3 className="lang lang-en">Mobile app development</h3>
+              <h3 className="lang lang-zh">移动应用开发</h3>
               <ul>
-                <li className="lang lang-en">Custom spans from 40 ft.</li>
-                <li className="lang lang-zh">可定制40英尺以上跨度。</li>
-                <li className="lang lang-en">Integrated shading &amp; blackout automation.</li>
-                <li className="lang lang-zh">整合遮阳与全自动黑幕系统。</li>
-                <li className="lang lang-en">Seismic and snow-load engineering.</li>
-                <li className="lang lang-zh">满足地震及雪载结构规范。</li>
+                <li className="lang lang-en">iOS, Android, and cross-platform builds with shared design systems.</li>
+                <li className="lang lang-zh">支持 iOS、Android 及跨端开发，统一设计系统。</li>
+                <li className="lang lang-en">Messaging, notifications, and content moderation baked in.</li>
+                <li className="lang lang-zh">内置消息、通知与内容治理能力。</li>
+                <li className="lang lang-en">App Store and Play Store launch readiness packages.</li>
+                <li className="lang lang-zh">提供 App Store 与 Play Store 上线准备服务。</li>
               </ul>
             </article>
             <article className="solution-card">
-              <h3 className="lang lang-en">Irrigation &amp; fertigation</h3>
-              <h3 className="lang lang-zh">灌溉与营养液系统</h3>
+              <h3 className="lang lang-en">Web &amp; platform apps</h3>
+              <h3 className="lang lang-zh">网页与平台应用</h3>
               <ul>
-                <li className="lang lang-en">Closed-loop dosing for water stewardship.</li>
-                <li className="lang lang-zh">闭环加注系统保障水资源利用。</li>
-                <li className="lang lang-en">Remote recipes synced to climate controls.</li>
-                <li className="lang lang-zh">营养配方与环境控制远程联动。</li>
-                <li className="lang lang-en">NSF-certified plumbing assemblies.</li>
-                <li className="lang lang-zh">NSF认证管路组件。</li>
+                <li className="lang lang-en">Responsive web apps, admin portals, and creator dashboards.</li>
+                <li className="lang lang-zh">响应式网页应用、管理后台与创作者看板。</li>
+                <li className="lang lang-en">API-first architectures with cloud-native observability.</li>
+                <li className="lang lang-zh">API 优先的云原生架构，具备可观测性。</li>
+                <li className="lang lang-en">Accessibility and localization baked into every release.</li>
+                <li className="lang lang-zh">每次发布均考虑无障碍与多语言。</li>
               </ul>
             </article>
             <article className="solution-card">
-              <h3 className="lang lang-en">Smart cultivation systems</h3>
-              <h3 className="lang lang-zh">智慧栽培系统</h3>
+              <h3 className="lang lang-en">Social &amp; community systems</h3>
+              <h3 className="lang lang-zh">社交与社区系统</h3>
               <ul>
-                <li className="lang lang-en">Sensor networks with predictive analytics.</li>
-                <li className="lang lang-zh">传感网络与预测分析模型。</li>
-                <li className="lang lang-en">
-                  Crop steering playbooks for cannabis, leafy greens, floriculture.
-                </li>
-                <li className="lang lang-zh">适用于大麻、叶菜与花卉的栽培策略。</li>
-                <li className="lang lang-en">GAP, USDA Organic, and GACP onboarding support.</li>
-                <li className="lang lang-zh">提供GAP、USDA Organic、GACP认证辅导。</li>
+                <li className="lang lang-en">Feeds, chat, live events, and UGC tooling built to scale safely.</li>
+                <li className="lang lang-zh">动态、聊天、直播与UGC工具，兼顾扩展性与安全。</li>
+                <li className="lang lang-en">Trust &amp; safety workflows, reporting, and AI-assisted moderation.</li>
+                <li className="lang lang-zh">信任与安全流程、举报机制及AI辅助审核。</li>
+                <li className="lang lang-en">Growth loops integrated with analytics and CRM stacks.</li>
+                <li className="lang lang-zh">结合数据分析与CRM的增长闭环设计。</li>
               </ul>
             </article>
           </div>
         </section>
 
+        <section className="gallery">
+          <div className="section-heading">
+            <h2 className="lang lang-en">Product visuals from recent launches</h2>
+            <h2 className="lang lang-zh">近期上线项目的产品视觉</h2>
+            <p className="lang lang-en">Screens from remote workshops, beta dashboards, and community experiences.</p>
+            <p className="lang lang-zh">展示远程工作坊、测试版控制台与社区体验的截屏。</p>
+          </div>
+          <div className="gallery__grid" role="list">
+            <figure className="gallery__card" role="listitem">
+              <Image
+                className="gallery__image"
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85"
+                alt="Mobile social app prototype displayed on multiple devices"
+                width={1200}
+                height={780}
+                loading="lazy"
+                sizes="(max-width: 992px) 100vw, 480px"
+              />
+              <figcaption>
+                <span className="lang lang-en">Cross-platform social commerce flows for launch readiness.</span>
+                <span className="lang lang-zh">跨平台社交电商流程，确保上线准备充分。</span>
+              </figcaption>
+            </figure>
+            <figure className="gallery__card" role="listitem">
+              <Image
+                className="gallery__image"
+                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=85"
+                alt="Team collaborating via virtual whiteboard"
+                width={1200}
+                height={780}
+                loading="lazy"
+                sizes="(max-width: 992px) 100vw, 480px"
+              />
+              <figcaption>
+                <span className="lang lang-en">Remote ideation boards connecting Pacific and Asia teams.</span>
+                <span className="lang lang-zh">连接太平洋与亚洲团队的远程头脑风暴白板。</span>
+              </figcaption>
+            </figure>
+            <figure className="gallery__card" role="listitem">
+              <Image
+                className="gallery__image"
+                src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1200&q=85"
+                alt="Analytics dashboard showing retention metrics"
+                width={1200}
+                height={780}
+                loading="lazy"
+                sizes="(max-width: 992px) 100vw, 480px"
+              />
+              <figcaption>
+                <span className="lang lang-en">Engagement telemetry dashboards with privacy-safe metrics.</span>
+                <span className="lang lang-zh">隐私友好的互动遥测仪表盘。</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="sustainability">
           <div className="section-heading">
-            <h2 className="lang lang-en">Sustainability roadmap</h2>
-            <h2 className="lang lang-zh">可持续发展路线</h2>
+            <h2 className="lang lang-en">Reliability &amp; trust</h2>
+            <h2 className="lang lang-zh">可靠性与信任</h2>
           </div>
           <div className="sustainability__grid">
             <article className="sustainability-card">
-              <h3 className="lang lang-en">Energy modeling</h3>
-              <h3 className="lang lang-zh">能源建模</h3>
-              <p className="lang lang-en">
-                Photovoltaic integration studies with 7-year ROI baseline for each project.
-              </p>
-              <p className="lang lang-zh">提供光伏系统集成评估，为项目制定7年收益模型。</p>
+              <h3 className="lang lang-en">Architecture reviews</h3>
+              <h3 className="lang lang-zh">架构评审</h3>
+              <p className="lang lang-en">Cloud cost modeling, performance budgets, and scalability drills before launch.</p>
+              <p className="lang lang-zh">上线前进行云成本模型、性能预算与扩展性演练。</p>
             </article>
             <article className="sustainability-card">
-              <h3 className="lang lang-en">Water recapture</h3>
-              <h3 className="lang lang-zh">水资源回收</h3>
-              <p className="lang lang-en">
-                Condensate reclaim and sterilization loops reduce municipal draw by up to 38%.
-              </p>
-              <p className="lang lang-zh">冷凝水回收与灭菌循环方案，可降低市政用水量38%。</p>
+              <h3 className="lang lang-en">Privacy &amp; security</h3>
+              <h3 className="lang lang-zh">隐私与安全</h3>
+              <p className="lang lang-en">Secure SDLC practices, PII minimization, and third-party security reviews.</p>
+              <p className="lang lang-zh">采用安全开发流程、最小化个人信息收集，并进行第三方安全审查。</p>
             </article>
             <article className="sustainability-card">
-              <h3 className="lang lang-en">Regenerative inputs</h3>
-              <h3 className="lang lang-zh">再生投入物</h3>
-              <p className="lang lang-en">
-                Peat-free substrates and biodegradable trellis materials protect local ecosystems.
-              </p>
-              <p className="lang lang-zh">采用无泥炭基质及可降解藤架材料，保护区域生态。</p>
+              <h3 className="lang lang-en">Accessibility by default</h3>
+              <h3 className="lang lang-zh">默认无障碍体验</h3>
+              <p className="lang lang-en">WCAG-aligned patterns, multi-language support, and inclusive content standards.</p>
+              <p className="lang lang-zh">遵循 WCAG 的设计模式，支持多语言与包容性内容标准。</p>
             </article>
           </div>
         </section>
 
         <section className="process">
           <div className="section-heading">
-            <h2 className="lang lang-en">Turnkey delivery process</h2>
-            <h2 className="lang lang-zh">交钥匙交付流程</h2>
+            <h2 className="lang lang-en">Delivery process</h2>
+            <h2 className="lang lang-zh">交付流程</h2>
           </div>
           <ol className="process__steps">
             <li>
-              <h3 className="lang lang-en">01. Discovery &amp; compliance audit</h3>
-              <h3 className="lang lang-zh">01. 需求梳理与合规评估</h3>
-              <p className="lang lang-en">
-                Create project roadmap aligned with municipal code, USDA, and state-level mandates.
-              </p>
-              <p className="lang lang-zh">梳理项目蓝图，对接市政法规、USDA及州级要求。</p>
+              <h3 className="lang lang-en">01. Discovery &amp; technical audit</h3>
+              <h3 className="lang lang-zh">01. 需求梳理与技术评估</h3>
+              <p className="lang lang-en">Define goals, target users, and integration surfaces.</p>
+              <p className="lang lang-zh">明确目标、用户画像与系统对接范围。</p>
             </li>
             <li>
-              <h3 className="lang lang-en">02. Engineering &amp; procurement</h3>
-              <h3 className="lang lang-zh">02. 工程设计与采购</h3>
-              <p className="lang lang-en">
-                Finalize structural drawings, source materials, and lock production slots with vendors.
-              </p>
-              <p className="lang lang-zh">完成结构设计、确定物料并锁定供应商产能。</p>
+              <h3 className="lang lang-en">02. Experience &amp; architecture</h3>
+              <h3 className="lang lang-zh">02. 体验与架构设计</h3>
+              <p className="lang lang-en">Deliver user journeys, prototypes, and a technical blueprint for scalable builds.</p>
+              <p className="lang lang-zh">输出用户旅程、原型以及可扩展的技术蓝图。</p>
             </li>
             <li>
-              <h3 className="lang lang-en">03. Installation &amp; training</h3>
-              <h3 className="lang lang-zh">03. 安装调试与培训</h3>
-              <p className="lang lang-en">
-                On-site supervision, commissioning, and operator training with bilingual specialists.
-              </p>
-              <p className="lang lang-zh">双语工程师现场监理、调试并提供运营培训。</p>
+              <h3 className="lang lang-en">03. Build &amp; launch</h3>
+              <h3 className="lang lang-zh">03. 开发与上线</h3>
+              <p className="lang lang-en">Sprint-based development, QA automation, and go-live playbooks for app stores and web.</p>
+              <p className="lang lang-zh">以冲刺节奏完成开发与自动化测试，按照上线手册发布至应用商店和网页。</p>
             </li>
             <li>
-              <h3 className="lang lang-en">04. Lifecycle service</h3>
-              <h3 className="lang lang-zh">04. 生命周期服务</h3>
-              <p className="lang lang-en">
-                Remote monitoring, preventative maintenance, and harvest analytics dashboards.
-              </p>
-              <p className="lang lang-zh">提供远程监控、预防性维护及产量分析看板。</p>
+              <h3 className="lang lang-en">04. Care &amp; optimization</h3>
+              <h3 className="lang lang-zh">04. 运营与优化</h3>
+              <p className="lang lang-en">A/B testing, reliability reviews, and growth experiments keep products evolving.</p>
+              <p className="lang lang-zh">通过 A/B 测试、可靠性评审与增长实验，持续迭代产品。</p>
             </li>
           </ol>
-        </section>
-
-        <section id="compliance" className="compliance">
-          <div className="section-heading">
-            <h2 className="lang lang-en">Compliance &amp; credentials</h2>
-            <h2 className="lang lang-zh">合规资质</h2>
-            <p className="lang lang-en">
-              West Garden Supply maintains transparent corporate governance and verifiable certifications to support
-              regulated industries and enterprise partnerships.
-            </p>
-            <p className="lang lang-zh">西部园艺供应保持透明的公司治理与可验证的认证体系，支持受监管行业与企业合作。</p>
-          </div>
-          <div className="compliance__grid">
-            <article className="compliance-card">
-              <h3 className="lang lang-en">Registrations</h3>
-              <h3 className="lang lang-zh">注册信息</h3>
-              <ul>
-                <li className="lang lang-en">State of Washington Unified Business Identifier: 604-981-227</li>
-                <li className="lang lang-zh">华盛顿州统一商业编码：604-981-227</li>
-                <li className="lang lang-en">D-U-N-S: 118167093</li>
-                <li className="lang lang-zh">D-U-N-S编号：118167093</li>
-              </ul>
-            </article>
-            <article className="compliance-card">
-              <h3 className="lang lang-en">Certifications</h3>
-              <h3 className="lang lang-zh">认证体系</h3>
-              <ul>
-                <li className="lang lang-en">ISO 9001:2015 Quality Management</li>
-                <li className="lang lang-zh">ISO 9001:2015 质量管理体系</li>
-                <li className="lang lang-en">ISO 14001:2015 Environmental Management</li>
-                <li className="lang lang-zh">ISO 14001:2015 环境管理体系</li>
-                <li className="lang lang-en">UL 8800 horticultural lighting partner network</li>
-                <li className="lang lang-zh">UL 8800 园艺照明合作伙伴网络</li>
-              </ul>
-            </article>
-            <article className="compliance-card">
-              <h3 className="lang lang-en">Insurance &amp; assurances</h3>
-              <h3 className="lang lang-zh">保险与保障</h3>
-              <ul>
-                <li className="lang lang-en">General liability coverage: $5M aggregate</li>
-                <li className="lang lang-zh">综合责任险：总保额500万美元</li>
-                <li className="lang lang-en">Workers&apos; compensation compliant in WA, NV, OH</li>
-                <li className="lang lang-zh">华盛顿、内华达、俄亥俄州员工保险合规</li>
-                <li className="lang lang-en">Vendor-managed inventory with SOC 2 certified partners</li>
-                <li className="lang lang-zh">与通过SOC 2认证的合作伙伴提供寄售库存服务</li>
-              </ul>
-            </article>
-          </div>
         </section>
 
         <section className="testimonials">
@@ -375,35 +468,33 @@ const LandingPage = () => {
           <div className="testimonial-list">
             <article>
               <p className="lang lang-en">
-                “West Garden Supply scaled our controlled environment farms from 12,000 to 60,000 sq ft with zero
-                downtime. Their bilingual team ensured compliance audits in both English and Mandarin.”
+                “They launched our social commerce app in under 90 days—messaging, live rooms, and moderation included—
+                without us managing any physical inventory.”
               </p>
               <p className="lang lang-zh">
-                “西部园艺供应帮助我们将控温农场从12,000平方英尺扩大到60,000平方英尺，期间没有任何停机。其双语团队协助完成了英语与中文的合规审核。”
+                “他们在90天内交付了我们的社交电商应用，聊天、直播、审核全都上线，我们完全无需管理任何实体库存。”
               </p>
-              <span className="lang lang-en">— Operations Director, Cascade Greens</span>
-              <span className="lang lang-zh">— Cascade Greens 运营总监</span>
+              <span className="lang lang-en">— COO, NovaLink Networks</span>
+              <span className="lang lang-zh">— NovaLink Networks 首席运营官</span>
             </article>
             <article>
               <p className="lang lang-en">
-                “Their fertigation automation cut nutrient variance by 22% and gave our agronomists instant visibility.”
+                “Their analytics and A/B testing framework helped us grow weekly active users by 28% while keeping trust &amp;
+                safety tightly controlled.”
               </p>
-              <p className="lang lang-zh">“营养液自动化系统将营养波动降低了22%，团队随时掌握关键数据。”</p>
-              <span className="lang lang-en">— Head Grower, Sunharvest Cooperative</span>
-              <span className="lang lang-zh">— Sunharvest Cooperative 首席种植师</span>
+              <p className="lang lang-zh">“他们的分析与 A/B 测试框架让周活提升了28%，同时保持了严格的安全治理。”</p>
+              <span className="lang lang-en">— Product Lead, LumenStack</span>
+              <span className="lang lang-zh">— LumenStack 产品负责人</span>
             </article>
           </div>
         </section>
 
         <section id="contact" className="contact">
           <div className="section-heading">
-            <h2 className="lang lang-en">Let’s build your next cultivation site</h2>
-            <h2 className="lang lang-zh">携手打造您的下一座智慧农场</h2>
-            <p className="lang lang-en">
-              Submit an RFQ, schedule a technical workshop, or request corporate documentation tailored for Google or
-              Apple developer onboarding.
-            </p>
-            <p className="lang lang-zh">欢迎提交询价、预约技术研讨，或索取用于Google/Apple开发者审核的公司资料。</p>
+            <h2 className="lang lang-en">Let’s ship your next digital product</h2>
+            <h2 className="lang lang-zh">携手上线您的下一个数字产品</h2>
+            <p className="lang lang-en">Submit a project brief, schedule a remote workshop, or request estimates for your roadmap.</p>
+            <p className="lang lang-zh">欢迎提交项目简介、预约远程研讨，或索取路线图的时间与成本评估。</p>
           </div>
           <div className="contact__grid">
             <div className="contact__card">
@@ -423,32 +514,30 @@ const LandingPage = () => {
               <p className="lang lang-zh">周一至周五，太平洋时间 8:30–18:00</p>
             </div>
             <div className="contact__card">
-              <h3 className="lang lang-en">Warehousing &amp; logistics</h3>
-              <h3 className="lang lang-zh">仓储与物流中心</h3>
-              <p className="lang lang-en">Reno, NV · Columbus, OH</p>
-              <p className="lang lang-zh">美国内华达州里诺 · 俄亥俄州哥伦布</p>
-              <p className="lang lang-en">Same-day fulfillment for priority SKUs across West &amp; Midwest regions.</p>
-              <p className="lang lang-zh">优先SKU可在美国西部及中西部实现当日发货。</p>
+              <h3 className="lang lang-en">Remote delivery</h3>
+              <h3 className="lang lang-zh">远程交付</h3>
+              <p className="lang lang-en">Distributed teams across Pacific and Asia time zones.</p>
+              <p className="lang lang-zh">分布式团队覆盖太平洋与亚洲时区。</p>
+              <p className="lang lang-en">All services delivered online—no physical goods or on-prem inventory.</p>
+              <p className="lang lang-zh">全部服务均在线交付，不涉及任何实体商品或本地库存。</p>
             </div>
             <div className="contact__card">
               <h3 className="lang lang-en">Contact</h3>
               <h3 className="lang lang-zh">联系方式</h3>
               <p>
-                <a href="tel:+12069803370">+1 (206) 980-3370</a>
-                <br />
-                <a href="mailto:hello@westgardensupply.com">hello@westgardensupply.com</a>
+                <a href="mailto:contact@westgardensupply.com">contact@westgardensupply.com</a>
               </p>
               <p className="lang lang-en">We typically respond within one business day.</p>
               <p className="lang lang-zh">通常在一个工作日内回复。</p>
               <a
                 className="btn btn--ghost lang lang-en"
-                href="mailto:hello@westgardensupply.com?subject=Partnership%20Inquiry"
+                href="mailto:contact@westgardensupply.com?subject=Partnership%20Inquiry"
               >
                 Email our team
               </a>
               <a
                 className="btn btn--ghost lang lang-zh"
-                href="mailto:hello@westgardensupply.com?subject=%E5%90%88%E4%BD%9C%E9%97%AE%E8%AF%A2"
+                href="mailto:contact@westgardensupply.com?subject=%E5%90%88%E4%BD%9C%E9%97%AE%E8%AF%A2"
               >
                 发送邮件
               </a>
@@ -458,21 +547,15 @@ const LandingPage = () => {
       </main>
       <footer className="site-footer">
         <div>
-          <span className="lang lang-en">© 2025 West Garden Supply. All rights reserved.</span>
-          <span className="lang lang-zh">© 2025 西部园艺供应。保留所有权利。</span>
+          <span className="lang lang-en">© 2025 Wavelength Global Studio. All rights reserved.</span>
+          <span className="lang lang-zh">© 2025 维浪全球工作室。保留所有权利。</span>
         </div>
         <div className="footer-links">
-          <a className="lang lang-en" href="#compliance">
-            Corporate compliance
+          <a className="lang lang-en" href="mailto:contact@westgardensupply.com">
+            contact@westgardensupply.com
           </a>
-          <a className="lang lang-zh" href="#compliance">
-            公司合规
-          </a>
-          <a className="lang lang-en" href="mailto:legal@westgardensupply.com">
-            legal@westgardensupply.com
-          </a>
-          <a className="lang lang-zh" href="mailto:legal@westgardensupply.com">
-            legal@westgardensupply.com
+          <a className="lang lang-zh" href="mailto:contact@westgardensupply.com">
+            contact@westgardensupply.com
           </a>
         </div>
       </footer>

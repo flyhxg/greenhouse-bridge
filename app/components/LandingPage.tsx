@@ -137,7 +137,8 @@ const LandingPage: FC = () => {
             <h1 className="hero__headline lang lang-en">Social-first software without physical goods.</h1>
             <h1 className="hero__headline lang lang-zh">纯线上交付的社交型软件服务。</h1>
             <p className="hero__body lang lang-en">
-              We design, build, and optimize mobile and web applications—community feeds, messaging, creator tools, and bespoke digital platforms—delivered entirely online with continuous support.
+              We design, build, and optimize mobile and web applications—community feeds, messaging, creator tools, and bespoke
+              digital platforms—delivered entirely online with continuous support.
             </p>
             <p className="hero__body lang lang-zh">
               我们提供移动端与网页端应用的设计、开发与优化，包括社区互动、即时通讯、创作者工具及定制化数字平台，全程在线交付并持续运维。
@@ -156,49 +157,53 @@ const LandingPage: FC = () => {
                 索取合作方案
               </a>
             </div>
+            <div className="hero__solutions-preview">
+              <ul className="hero__solution-list lang lang-en">
+                <li>
+                  <strong>Community interactions</strong>
+                  <span>Feeds, forums, and live rooms crafted for engagement.</span>
+                </li>
+                <li>
+                  <strong>Messaging &amp; trust</strong>
+                  <span>Secure chat, moderation, and safety guardrails included.</span>
+                </li>
+                <li>
+                  <strong>Creator-ready platforms</strong>
+                  <span>Publishing, analytics, and monetization that ship quickly.</span>
+                </li>
+              </ul>
+              <ul className="hero__solution-list lang lang-zh">
+                <li>
+                  <strong>社区互动体验</strong>
+                  <span>动态、论坛与直播工具，提升用户参与度。</span>
+                </li>
+                <li>
+                  <strong>通讯与安全</strong>
+                  <span>安全聊天、审核与信任机制一体化配置。</span>
+                </li>
+                <li>
+                  <strong>创作者友好平台</strong>
+                  <span>发布、数据与变现能力快速上线。</span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="hero__visual-stack">
             <div className="hero__visual">
-              <div className="hero__note">
-                <p className="hero__note-kicker lang lang-en">Company principles</p>
-                <p className="hero__note-kicker lang lang-zh">公司理念</p>
-                <h3 className="hero__note-title lang lang-en">Purely online, social-grade delivery.</h3>
-                <h3 className="hero__note-title lang lang-zh">纯线上交付的社交型软件服务。</h3>
-                <p className="hero__note-body lang lang-en">
-                  We design, build, and optimize mobile and web apps for community interaction, messaging, creator tools,
-                  and bespoke digital platforms—delivered fully online with ongoing operations.
-                </p>
-                <p className="hero__note-body lang lang-zh">
-                  我们提供移动端与网页端应用的设计、开发与优化，包括社区互动、即时通讯、创作者工具及定制化数字平台，全程在线交付并
-                  持续运维。
-                </p>
-                <ul className="hero__note-list">
-                  <li className="lang lang-en">
-                    <span>Community interactions</span>
-                    <small>Feeds, forums, and live rooms crafted for engagement.</small>
-                  </li>
-                  <li className="lang lang-zh">
-                    <span>社区互动体验</span>
-                    <small>动态、论坛与直播工具，提升用户参与度。</small>
-                  </li>
-                  <li className="lang lang-en">
-                    <span>Messaging &amp; trust</span>
-                    <small>Secure chat, moderation, and safety guardrails included.</small>
-                  </li>
-                  <li className="lang lang-zh">
-                    <span>通讯与安全</span>
-                    <small>安全聊天、审核与信任机制一体化配置。</small>
-                  </li>
-                  <li className="lang lang-en">
-                    <span>Creator-ready platforms</span>
-                    <small>Publishing, analytics, and monetization that ship quickly.</small>
-                  </li>
-                  <li className="lang lang-zh">
-                    <span>创作者友好平台</span>
-                    <small>发布、数据与变现能力快速上线。</small>
-                  </li>
-                </ul>
-              </div>
+                <div className="hero__note">
+                  <p className="hero__note-kicker lang lang-en">Company principles</p>
+                  <p className="hero__note-kicker lang lang-zh">公司理念</p>
+                  <h3 className="hero__note-title lang lang-en">Online-only social software delivery.</h3>
+                  <h3 className="hero__note-title lang lang-zh">纯线上交付的社交型软件服务。</h3>
+                  <p className="hero__note-body lang lang-en">
+                    We provide design, development, and optimization for mobile and web apps, including community interaction,
+                    instant messaging, creator tools, and custom digital platforms—delivered entirely online with continuous
+                    operations.
+                  </p>
+                  <p className="hero__note-body lang lang-zh">
+                    我们提供移动端与网页端应用的设计、开发与优化，包括社区互动、即时通讯、创作者工具及定制化数字平台，全程在线交付并持续运维。
+                  </p>
+                </div>
               <figure className="hero__visual-card">
                 <Image
                   className="hero__image hero__image--primary"

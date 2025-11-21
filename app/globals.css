@@ -246,6 +246,36 @@ main {
   gap: 1rem;
 }
 
+.hero__solutions-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.hero__solution-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.85rem 1rem;
+  display: grid;
+  gap: 0.6rem;
+  background: linear-gradient(140deg, rgba(39, 89, 255, 0.08), rgba(143, 182, 255, 0.15));
+  border: 1px solid rgba(39, 89, 255, 0.12);
+  border-radius: var(--radius-md);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.hero__solution-list li {
+  display: grid;
+  gap: 0.2rem;
+  color: var(--color-muted);
+}
+
+.hero__solution-list strong {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
 .hero__visual-stack {
   display: flex;
   flex-direction: column;
@@ -652,6 +682,8 @@ body[data-lang="en"] .hero__body.lang.lang-en,
 body[data-lang="zh"] .hero__body.lang.lang-zh,
 body[data-lang="en"] .hero__note .lang.lang-en,
 body[data-lang="zh"] .hero__note .lang.lang-zh,
+body[data-lang="en"] .hero__solutions-preview .lang.lang-en,
+body[data-lang="zh"] .hero__solutions-preview .lang.lang-zh,
 body[data-lang="en"] .section-heading .lang.lang-en,
 body[data-lang="zh"] .section-heading .lang.lang-zh,
 body[data-lang="en"] .stat__label.lang.lang-en,
